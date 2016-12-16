@@ -55,9 +55,15 @@
 @property (nonatomic, assign) unichar opChar;
 
 /// METHOD
+/// Reset les données de la calculatrice
 - (void) resetCalculator;
+/// Change l'Etat actif des bouton d'operation (+,-,/,*)
 - (void) changeOpBtnToggleEnableStateWithBool:(BOOL) state;
+/// Modifie le label principal d'affichage
+/// avec un int passer en paramètre
 - (void) printInScrenLabelWithInt:(int) nb;
+/// Modifie le label principal d'affichage
+/// avec un unichar passer en paramètre
 - (void) printInScrenLabelWithUnichar:(unichar) car;
 
 @end
