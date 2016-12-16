@@ -157,6 +157,17 @@
     self.btnMinus.enabled = state;
     self.btnDivide.enabled = state;
     self.btnMultiplier.enabled = state;
+    if(state){
+        self.btnPlus.backgroundColor = [UIColor whiteColor];
+        self.btnMinus.backgroundColor = [UIColor whiteColor];
+        self.btnDivide.backgroundColor = [UIColor whiteColor];
+        self.btnMultiplier.backgroundColor = [UIColor whiteColor];
+    }else{
+        self.btnPlus.backgroundColor = [UIColor lightGrayColor];
+        self.btnMinus.backgroundColor = [UIColor lightGrayColor];
+        self.btnDivide.backgroundColor = [UIColor lightGrayColor];
+        self.btnMultiplier.backgroundColor = [UIColor lightGrayColor];
+    }
 }
 
 - (void) printInScrenLabelWithInt:(int) nb{
