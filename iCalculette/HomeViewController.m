@@ -14,6 +14,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
     self.opChar = ' ';
     self.lblNumberPrinter.text = @"0";
 }
@@ -32,6 +33,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+// UIStatusBar
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 
 /// EVENT METHOD

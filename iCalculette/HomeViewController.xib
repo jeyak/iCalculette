@@ -49,7 +49,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.263946138" green="0.58232116609999995" blue="0.72257444370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.10585191380310985" green="0.25155312168167021" blue="0.33172981589252415" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6gN-Xc-RB1">
                     <rect key="frame" x="5" y="171" width="88" height="105"/>
@@ -57,7 +57,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="7">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn7_Click:" destination="-1" eventType="touchUpInside" id="MlC-EB-Bdb"/>
@@ -69,7 +69,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="8">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn8_Click:" destination="-1" eventType="touchUpInside" id="17U-nE-5fb"/>
@@ -81,7 +81,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="4">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn4_Click:" destination="-1" eventType="touchUpInside" id="wT0-eM-3CH"/>
@@ -93,7 +93,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="5">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn5_Click:" destination="-1" eventType="touchUpInside" id="qFN-RE-oN2"/>
@@ -105,7 +105,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="1">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn1_Click:" destination="-1" eventType="touchUpInside" id="Q8e-Ny-fwx"/>
@@ -117,7 +117,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="2">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn2_Click:" destination="-1" eventType="touchUpInside" id="fIi-VU-F2d"/>
@@ -129,7 +129,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="0">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn0_Click:" destination="-1" eventType="touchUpInside" id="5RK-HN-RGB"/>
@@ -141,7 +141,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="9">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn9_Click:" destination="-1" eventType="touchUpInside" id="WBs-fb-BCT"/>
@@ -153,7 +153,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="6">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn6_Click:" destination="-1" eventType="touchUpInside" id="cDa-Pq-fYR"/>
@@ -165,7 +165,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="3">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btn3_Click:" destination="-1" eventType="touchUpInside" id="BOj-pj-M92"/>
@@ -177,7 +177,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="=">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnEqual_Click:" destination="-1" eventType="touchUpInside" id="fUt-St-GDf"/>
@@ -189,7 +189,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="+">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnPlus_Click:" destination="-1" eventType="touchUpInside" id="6F8-v0-g1W"/>
@@ -201,7 +201,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="-">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnMinus_Click:" destination="-1" eventType="touchUpInside" id="buh-hL-KRe"/>
@@ -213,7 +213,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="x">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnMultiplier:" destination="-1" eventType="touchUpInside" id="EIv-LK-teM"/>
@@ -225,7 +225,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="÷">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnDivide_Click:" destination="-1" eventType="touchUpInside" id="vWV-xC-9ye"/>
@@ -237,7 +237,7 @@
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <state key="normal" title="C">
-                        <color key="titleColor" red="0.25809729370000001" green="0.54074266959999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnC_Click:" destination="-1" eventType="touchUpInside" id="HME-Sh-rc4"/>
@@ -247,7 +247,7 @@
                     <rect key="frame" x="64" y="630" width="247" height="33"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                    <color key="textColor" red="0.263946138" green="0.58232116609999995" blue="0.72257444370000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
