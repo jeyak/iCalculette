@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#define iCALC_ERROR ((NSString*) @"Erreur :/")
 
 @implementation HomeViewController
 
@@ -69,29 +70,29 @@
 }
 
 - (IBAction)btnEqual_Click:(UIButton *)sender {
-    double nb1 = 0, nb2 = 0;
+    float nb1 = 0, nb2 = 0;
     switch (self.opChar) {
         case '+':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][0] doubleValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][1] doubleValue];
+            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][0] floatValue];
+            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][1] floatValue];
             [self resetCalculator];
             [self printInScreenLabelWithInt:(nb1+nb2)];
             break;
         case '-':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][0] doubleValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][1] doubleValue];
+            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][0] floatValue];
+            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][1] floatValue];
             [self resetCalculator];
             [self printInScreenLabelWithInt:(nb1-nb2)];
             break;
         case '/':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][0] doubleValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][1] doubleValue];
+            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][0] floatValue];
+            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][1] floatValue];
             [self resetCalculator];
             [self printInScreenLabelWithInt:(nb1/nb2)];
             break;
         case '*':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][0] doubleValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][1] doubleValue];
+            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][0] floatValue];
+            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][1] floatValue];
             [self resetCalculator];
             [self printInScreenLabelWithInt:(nb1*nb2)];
             break;
@@ -179,10 +180,28 @@
 }
 
 - (void) printInScreenLabelWithInt:(int) nb{
-    if([self.lblNumberPrinter.text isEqualToString:@"0"]){
-        self.lblNumberPrinter.text = [NSString stringWithFormat:@"%d", nb];
+    
+    if(nb != -2147483648){
+        if([self.lblNumberPrinter.text isEqualToString:@"0"] || [self.lblNumberPrinter.text isEqualToString:iCALC_ERROR]){
+            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%d", nb];
+        }else{
+            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%d", self.lblNumberPrinter.text , nb];
+        }
     }else{
-        self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%d", self.lblNumberPrinter.text , nb];
+        self.lblNumberPrinter.text = iCALC_ERROR;
+    }
+}
+
+- (void) printInScreenLabelWithDouble:(double) nb{
+    
+    if(nb != -2147483648){
+        if([self.lblNumberPrinter.text isEqualToString:@"0"] || [self.lblNumberPrinter.text isEqualToString:iCALC_ERROR]){
+            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%f", nb];
+        }else{
+            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%f", self.lblNumberPrinter.text , nb];
+        }
+    }else{
+        self.lblNumberPrinter.text = iCALC_ERROR;
     }
 }
 
