@@ -45,23 +45,23 @@
 /// EVENT METHOD
 
 - (IBAction)btn7_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:7];
+    [self printInScreenLabelWithInt:7];
 }
 
 - (IBAction)btn1_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:1];
+    [self printInScreenLabelWithInt:1];
 }
 
 - (IBAction)btn2_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:2];
+    [self printInScreenLabelWithInt:2];
 }
 
 - (IBAction)btn3_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:3];
+    [self printInScreenLabelWithInt:3];
 }
 
 - (IBAction)btn0_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:0];
+    [self printInScreenLabelWithInt:0];
 }
 
 - (IBAction)btnC_Click:(UIButton *)sender {
@@ -75,25 +75,25 @@
             nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][0] doubleValue];
             nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][1] doubleValue];
             [self resetCalculator];
-            [self printInScrenLabelWithInt:(nb1+nb2)];
+            [self printInScreenLabelWithInt:(nb1+nb2)];
             break;
         case '-':
             nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][0] doubleValue];
             nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][1] doubleValue];
             [self resetCalculator];
-            [self printInScrenLabelWithInt:(nb1-nb2)];
+            [self printInScreenLabelWithInt:(nb1-nb2)];
             break;
         case '/':
             nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][0] doubleValue];
             nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][1] doubleValue];
             [self resetCalculator];
-            [self printInScrenLabelWithInt:(nb1/nb2)];
+            [self printInScreenLabelWithInt:(nb1/nb2)];
             break;
         case '*':
             nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][0] doubleValue];
             nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][1] doubleValue];
             [self resetCalculator];
-            [self printInScrenLabelWithInt:(nb1*nb2)];
+            [self printInScreenLabelWithInt:(nb1*nb2)];
             break;
         default:
             break;
@@ -133,23 +133,23 @@
 }
 
 - (IBAction)btn8_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:8];
+    [self printInScreenLabelWithInt:8];
 }
 
 - (IBAction)btn9_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:9];
+    [self printInScreenLabelWithInt:9];
 }
 
 - (IBAction)btn4_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:4];
+    [self printInScreenLabelWithInt:4];
 }
 
 - (IBAction)btn5_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:5];
+    [self printInScreenLabelWithInt:5];
 }
 
 - (IBAction)btn6_Click:(UIButton *)sender {
-    [self printInScrenLabelWithInt:6];
+    [self printInScreenLabelWithInt:6];
 }
 
 // METHOD
@@ -178,7 +178,7 @@
     }
 }
 
-- (void) printInScrenLabelWithInt:(int) nb{
+- (void) printInScreenLabelWithInt:(int) nb{
     if([self.lblNumberPrinter.text isEqualToString:@"0"]){
         self.lblNumberPrinter.text = [NSString stringWithFormat:@"%d", nb];
     }else{

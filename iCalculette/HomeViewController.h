@@ -61,7 +61,7 @@
 - (void) changeOpBtnToggleEnableStateWithBool:(BOOL) state;
 /// Modifie le label principal d'affichage
 /// avec un int passer en paramètre
-- (void) printInScrenLabelWithInt:(int) nb;
+- (void) printInScreenLabelWithInt:(int) nb;
 /// Modifie le label principal d'affichage
 /// avec un unichar passer en paramètre
 - (void) printInScrenLabelWithUnichar:(unichar) car;
