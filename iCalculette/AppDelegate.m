@@ -18,7 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    // Override point for customization after application launch.
     HomeViewController* hvc = [[HomeViewController alloc] init]; // Construction
     CGRect screenRect = [UIScreen mainScreen].bounds; // Récup taille ecran courant
     UIWindow* window = [[UIWindow alloc] initWithFrame:screenRect]; // creation de la fenetre
