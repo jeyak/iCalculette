@@ -12,6 +12,7 @@
 @implementation HomeViewController
 
 @synthesize opChar = opChar_;
+@synthesize resultNb = resultNb_;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -70,35 +71,7 @@
 }
 
 - (IBAction)btnEqual_Click:(UIButton *)sender {
-    float nb1 = 0, nb2 = 0;
-    switch (self.opChar) {
-        case '+':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][0] floatValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][1] floatValue];
-            [self resetCalculator];
-            [self printInScreenLabelWithInt:(nb1+nb2)];
-            break;
-        case '-':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][0] floatValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][1] floatValue];
-            [self resetCalculator];
-            [self printInScreenLabelWithInt:(nb1-nb2)];
-            break;
-        case '/':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][0] floatValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][1] floatValue];
-            [self resetCalculator];
-            [self printInScreenLabelWithInt:(nb1/nb2)];
-            break;
-        case '*':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][0] floatValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][1] floatValue];
-            [self resetCalculator];
-            [self printInScreenLabelWithInt:(nb1*nb2)];
-            break;
-        default:
-            break;
-    }
+    [self executeOperation];
 }
 
 - (IBAction)btnMinus_Click:(UIButton *)sender {
@@ -209,6 +182,40 @@
     if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
     self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%c", self.lblNumberPrinter.text , car];
     }
+}
+
+- (void) executeOperation{
+    float nb1 = 0, nb2 = 0;
+    switch (self.opChar) {
+        case '+':
+            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][0] floatValue];
+            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][1] floatValue];
+            [self resetCalculator];
+            self.resultNb = nb1 + nb2;
+            break;
+        case '-':
+            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][0] floatValue];
+            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][1] floatValue];
+            [self resetCalculator];
+            self.resultNb = nb1 - nb2;
+            break;
+        case '/':
+            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][0] floatValue];
+            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][1] floatValue];
+            [self resetCalculator];
+            self.resultNb = nb1 / nb2;
+            break;
+        case '*':
+            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][0] floatValue];
+            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"x"][1] floatValue];
+            [self resetCalculator];
+            self.resultNb = nb1 * nb2;
+            break;
+        default:
+            [self printInScreenLabelWithInt:[iCALC_ERROR intValue]];
+            break;
+    }
+    [self printInScreenLabelWithInt:self.resultNb];
 }
 
 @end

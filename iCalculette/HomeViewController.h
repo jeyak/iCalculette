@@ -11,6 +11,7 @@
 @interface HomeViewController : UIViewController{
     @private
     unichar opChar_;
+    double resultNb_;
 }
 
 // UIElement PROPERTY
@@ -53,6 +54,7 @@
 
 /// Property
 @property (nonatomic, assign) unichar opChar;
+@property (nonatomic, assign) double resultNb;
 
 /// METHOD
 /// Reset les données de la calculatrice
@@ -65,5 +67,8 @@
 /// Modifie le label principal d'affichage
 /// avec un unichar passer en paramètre
 - (void) printInScrenLabelWithUnichar:(unichar) car;
+/// Execute le calcule selon le l'operateur (self.opChar)
+/// choisi par l'utilisateur
+- (void) executeOperation;
 
 @end
