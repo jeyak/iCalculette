@@ -70,5 +70,7 @@
 /// Execute le calcule selon le l'operateur (self.opChar)
 /// choisi par l'utilisateur
 - (void) executeOperation;
+/// Retourn vrai si le deuxième nombre a été saisi
+// - (Boolean) isSecondNumberIsSet;
 
 @end
