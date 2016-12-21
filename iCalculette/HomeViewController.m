@@ -245,7 +245,7 @@
             break;
     }
     if(self.opChar != ' ' || isOpExecuted){
-        [self printInScreenLabelWithInt:self.resultNb];
+        [self printInScreenLabelWithDouble:self.resultNb];
     }
 }
 
