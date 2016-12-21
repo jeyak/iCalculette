@@ -190,12 +190,12 @@
 }
 
 - (void) printInScreenLabelWithDouble:(double) nb{
-    
+    NSNumber *nsNb = [NSNumber numberWithDouble:nb];
     if(nb != -2147483648){
         if([self.lblNumberPrinter.text isEqualToString:@"0"] || [self.lblNumberPrinter.text isEqualToString:iCALC_ERROR]){
-            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%f", nb];
+            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@", [nsNb stringValue]];
         }else{
-            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%f", self.lblNumberPrinter.text , nb];
+            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%@", self.lblNumberPrinter.text , [nsNb stringValue]];
         }
     }else{
         self.lblNumberPrinter.text = iCALC_ERROR;
