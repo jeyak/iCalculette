@@ -12,6 +12,8 @@
     @private
     unichar opChar_;
     double resultNb_;
+    UIColor* btnActualColor_;
+    UIFont* actualLblFont_;
 }
 
 // UIElement PROPERTY
@@ -55,6 +57,8 @@
 /// Property
 @property (nonatomic, assign) unichar opChar;
 @property (nonatomic, assign) double resultNb;
+@property (nonatomic, strong) UIColor* btnActualColor;
+@property (nonatomic, strong) UIFont* actualLblFont;
 
 /// METHOD
 /// Reset les données de la calculatrice
@@ -72,5 +76,6 @@
 - (void) executeOperation;
 /// Retourn vrai si le deuxième nombre a été saisi
 // - (Boolean) isSecondNumberIsSet;
+- (void) adjustFontSizeInScreenLabel;
 
 @end
