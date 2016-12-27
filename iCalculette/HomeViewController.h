@@ -76,6 +76,5 @@
 - (void) executeOperation;
 /// Retourn vrai si le deuxième nombre a été saisi
 // - (Boolean) isSecondNumberIsSet;
-- (void) adjustFontSizeInScreenLabel;
 
 @end

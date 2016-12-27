@@ -53,44 +53,37 @@
 - (IBAction)btn7_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:7];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn1_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:1];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn2_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:2];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn3_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:3];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn0_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:0];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btnC_Click:(UIButton *)sender {
     [self resetCalculator];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btnEqual_Click:(UIButton *)sender {
     [self executeOperation];
     [self changeOpBtnToggleEnableStateWithBool:YES];
     self.opChar = ' ';
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btnMinus_Click:(UIButton *)sender {
@@ -102,7 +95,6 @@
         [self changeOpBtnToggleEnableStateWithBool:NO];
         self.opChar = '-';
     }
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btnPlus_Click:(UIButton *)sender {
@@ -114,7 +106,6 @@
         [self changeOpBtnToggleEnableStateWithBool:NO];
         self.opChar = '+';
     }
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btnMultiplier:(UIButton *)sender {
@@ -126,7 +117,6 @@
         [self changeOpBtnToggleEnableStateWithBool:NO];
         self.opChar = '*';
     }
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btnDivide_Click:(UIButton *)sender {
@@ -138,37 +128,31 @@
         [self changeOpBtnToggleEnableStateWithBool:NO];
         self.opChar = '/';
     }
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn8_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:8];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn9_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:9];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn4_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:4];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn5_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:5];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 - (IBAction)btn6_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:6];
     [self changeOpBtnToggleEnableStateWithBool:YES];
-    [self adjustFontSizeInScreenLabel];
 }
 
 // METHOD
@@ -266,18 +250,6 @@
     }
     if(self.opChar != ' ' || isOpExecuted){
         [self printInScreenLabelWithDouble:self.resultNb];
-    }
-}
-
-- (void) adjustFontSizeInScreenLabel{
-    if([self.lblNumberPrinter.text length] >= 32){
-        self.lblNumberPrinter.font = [self.actualLblFont fontWithSize:10];
-    }else if([self.lblNumberPrinter.text length] >= 16){
-        self.lblNumberPrinter.font = [self.actualLblFont fontWithSize:15];
-    }else if([self.lblNumberPrinter.text length] >= 8){
-        self.lblNumberPrinter.font = [self.actualLblFont fontWithSize:30];
-    }else{
-        self.lblNumberPrinter.font = [self.actualLblFont fontWithSize:60];
     }
 }
 
