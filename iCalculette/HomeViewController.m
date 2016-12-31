@@ -15,6 +15,8 @@
 @synthesize resultNb = resultNb_;
 @synthesize btnActualColor = btnActualColor_;
 @synthesize actualLblFont = actualLblFont_;
+@synthesize isOpExecuted = isOpExecuted_;
+@synthesize isOpButtonWasPressed = isOpButtonWasPressed_;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +25,7 @@
     self.lblNumberPrinter.text = @"0";
     self.btnActualColor = self.btnPlus.backgroundColor;
     self.actualLblFont = self.lblNumberPrinter.font;
+    self.isOpExecuted = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,107 +55,96 @@
 
 - (IBAction)btn7_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:7];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
 }
 
 - (IBAction)btn1_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:1];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
 }
 
 - (IBAction)btn2_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:2];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
 }
 
 - (IBAction)btn3_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:3];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
 }
 
 - (IBAction)btn0_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:0];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
-}
-
-- (IBAction)btnC_Click:(UIButton *)sender {
-    [self resetCalculator];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
-}
-
-- (IBAction)btnEqual_Click:(UIButton *)sender {
-    [self executeOperation];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
-    self.opChar = ' ';
-}
-
-- (IBAction)btnMinus_Click:(UIButton *)sender {
-    if(!(self.opChar == ' ' && (![self.lblNumberPrinter.text isEqualToString:@"0"]))){
-        [self executeOperation];
-    }
-    [self printInScrenLabelWithUnichar:'-'];
-    if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
-        [self changeOpBtnToggleEnableStateWithBool:NO];
-        self.opChar = '-';
-    }
-}
-
-- (IBAction)btnPlus_Click:(UIButton *)sender {
-    if(!(self.opChar == ' ' && (![self.lblNumberPrinter.text isEqualToString:@"0"]))){
-        [self executeOperation];
-    }
-    [self printInScrenLabelWithUnichar:'+'];
-    if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
-        [self changeOpBtnToggleEnableStateWithBool:NO];
-        self.opChar = '+';
-    }
-}
-
-- (IBAction)btnMultiplier:(UIButton *)sender {
-    if(!(self.opChar == ' ' && (![self.lblNumberPrinter.text isEqualToString:@"0"]))){
-        [self executeOperation];
-    }
-    [self printInScrenLabelWithUnichar:'*'];
-    if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
-        [self changeOpBtnToggleEnableStateWithBool:NO];
-        self.opChar = '*';
-    }
-}
-
-- (IBAction)btnDivide_Click:(UIButton *)sender {
-    if(!(self.opChar == ' ' && (![self.lblNumberPrinter.text isEqualToString:@"0"]))){
-        [self executeOperation];
-    }
-    [self printInScrenLabelWithUnichar:'/'];
-    if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
-        [self changeOpBtnToggleEnableStateWithBool:NO];
-        self.opChar = '/';
-    }
 }
 
 - (IBAction)btn8_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:8];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
+    // [self changeOpBtnToggleEnableStateWithBool:YES];
 }
 
 - (IBAction)btn9_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:9];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
+    // [self changeOpBtnToggleEnableStateWithBool:YES];
 }
 
 - (IBAction)btn4_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:4];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
+    // [self changeOpBtnToggleEnableStateWithBool:YES];
 }
 
 - (IBAction)btn5_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:5];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
+    // [self changeOpBtnToggleEnableStateWithBool:YES];
 }
 
 - (IBAction)btn6_Click:(UIButton *)sender {
     [self printInScreenLabelWithInt:6];
-    [self changeOpBtnToggleEnableStateWithBool:YES];
+    // [self changeOpBtnToggleEnableStateWithBool:YES];
+}
+
+- (IBAction)btnNegate_Click:(UIButton *)sender {
+    [self printInScreenLabelWithUnichar:'-'];
+}
+
+- (IBAction)btnComa_Click:(UIButton *)sender {
+    [self printInScreenLabelWithUnichar:'.'];
+}
+
+- (IBAction)btnC_Click:(UIButton *)sender {
+    self.lblOperationHistory.text = @"";
+    self.lblNumberPrinter.text = @"0";
+    [self resetCalculator];
+}
+
+- (IBAction)btnCE_Click:(UIButton *)sender {
+    self.lblNumberPrinter.text = @"0";
+    [self resetCalculator];
+}
+
+- (IBAction)btnErase_Click:(UIButton *)sender {
+    if ([self.lblNumberPrinter.text length] > 1) {
+        self.lblNumberPrinter.text = [self.lblNumberPrinter.text substringToIndex:[self.lblNumberPrinter.text length] - 1];
+    } else {
+        self.lblNumberPrinter.text = @"0";
+    }
+}
+
+- (IBAction)btnEqual_Click:(UIButton *)sender {
+    [self executeOperation];
+    self.lblOperationHistory.text = @"";
+    self.opChar = ' ';
+}
+
+- (IBAction)btnMinus_Click:(UIButton *)sender {
+    [self preExecuteOperationWithUnichar:'-'];
+}
+
+- (IBAction)btnPlus_Click:(UIButton *)sender {
+    [self preExecuteOperationWithUnichar:'+'];
+}
+
+- (IBAction)btnMultiplier:(UIButton *)sender {
+    [self preExecuteOperationWithUnichar:'*'];
+}
+
+- (IBAction)btnDivide_Click:(UIButton *)sender {
+    [self preExecuteOperationWithUnichar:'/'];
 }
 
 // METHOD
@@ -160,6 +152,7 @@
 - (void) resetCalculator{
     self.opChar = ' ';
     self.lblNumberPrinter.text = @"0";
+    // self.resultNb = 0;
 }
 
 - (void) changeOpBtnToggleEnableStateWithBool:(BOOL) state{
@@ -183,8 +176,9 @@
 - (void) printInScreenLabelWithInt:(int) nb{
     
     if(nb != -2147483648){
-        if([self.lblNumberPrinter.text isEqualToString:@"0"] || [self.lblNumberPrinter.text isEqualToString:iCALC_ERROR]){
+        if([self.lblNumberPrinter.text isEqualToString:@"0"] || [self.lblNumberPrinter.text isEqualToString:iCALC_ERROR] || self.isOpButtonWasPressed == YES){
             self.lblNumberPrinter.text = [NSString stringWithFormat:@"%d", nb];
+            self.isOpButtonWasPressed = NO;
         }else{
             self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%d", self.lblNumberPrinter.text , nb];
         }
@@ -196,8 +190,10 @@
 - (void) printInScreenLabelWithDouble:(double) nb{
     NSNumber *nsNb = [NSNumber numberWithDouble:nb];
     if(nb != -2147483648){
-        if([self.lblNumberPrinter.text isEqualToString:@"0"] || [self.lblNumberPrinter.text isEqualToString:iCALC_ERROR]){
+        if([self.lblNumberPrinter.text isEqualToString:@"0"] || [self.lblNumberPrinter.text isEqualToString:iCALC_ERROR] || self.isOpButtonWasPressed == YES || self.isOpExecuted == YES){
             self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@", [nsNb stringValue]];
+            self.isOpButtonWasPressed = NO;
+            self.isOpExecuted = NO;
         }else{
             self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%@", self.lblNumberPrinter.text , [nsNb stringValue]];
         }
@@ -206,51 +202,64 @@
     }
 }
 
-- (void) printInScrenLabelWithUnichar:(unichar) car{
-    if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
-    self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%c", self.lblNumberPrinter.text , car];
+- (void) printInScreenLabelWithUnichar:(unichar) car{
+    if(car == '.' && ([self isCharactereIsPresentInNSString:self.lblNumberPrinter.text andWithNSString:@"."] != YES)){
+        self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%c", self.lblNumberPrinter.text , car];
+    }else{
+        if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
+            self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%c", self.lblNumberPrinter.text , car];
+        }
     }
 }
 
+- (void) printCurrentNumberInHistoryLabelWithOpUnichar:(unichar) op{
+    self.lblOperationHistory.text = [NSString stringWithFormat:@"%@%@%c", self.lblOperationHistory.text, self.lblNumberPrinter.text, op];
+}
+
 - (void) executeOperation{
-    float nb1 = 0, nb2 = 0;
-    Boolean isOpExecuted = false;
     switch (self.opChar) {
         case '+':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][0] floatValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"+"][1] floatValue];
-            [self resetCalculator];
-            self.resultNb = nb1 + nb2;
-            isOpExecuted = YES;
+            self.resultNb += [self.lblNumberPrinter.text doubleValue];
             break;
         case '-':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][0] floatValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"-"][1] floatValue];
-            [self resetCalculator];
-            self.resultNb = nb1 - nb2;
-            isOpExecuted = YES;
+            self.resultNb -= [self.lblNumberPrinter.text doubleValue];
             break;
         case '/':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][0] floatValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"/"][1] floatValue];
-            [self resetCalculator];
-            self.resultNb = nb1 / nb2;
-            isOpExecuted = YES;
+            self.resultNb /= [self.lblNumberPrinter.text doubleValue];
             break;
         case '*':
-            nb1 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"*"][0] floatValue];
-            nb2 = [[self.lblNumberPrinter.text componentsSeparatedByString:@"*"][1] floatValue];
-            [self resetCalculator];
-            self.resultNb = nb1 * nb2;
-            isOpExecuted = YES;
+            self.resultNb *= [self.lblNumberPrinter.text doubleValue];
             break;
         default:
-            // [self printInScreenLabelWithInt:[iCALC_ERROR intValue]];
+            
             break;
     }
-    if(self.opChar != ' ' || isOpExecuted){
+    if(self.opChar != ' ' || self.isOpExecuted){
         [self printInScreenLabelWithDouble:self.resultNb];
     }
+    self.isOpExecuted = YES;
+}
+
+- (void) preExecuteOperationWithUnichar:(unichar) op{
+    [self printCurrentNumberInHistoryLabelWithOpUnichar:op];
+    if((self.opChar != ' ' && ![self.lblNumberPrinter.text isEqualToString:@"0"])){
+        [self executeOperation];
+    }else{
+        self.resultNb = [self.lblNumberPrinter.text doubleValue];
+    }
+    if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
+        self.opChar = op;
+    }
+    self.isOpButtonWasPressed = YES;
+}
+
+- (Boolean) isCharactereIsPresentInNSString:(NSString*) str andWithNSString:(NSString*) car{
+    NSRange range = [str rangeOfString:car];
+    if (range.location != NSNotFound)
+    {
+        return YES;
+    }
+    return NO;
 }
 
 @end
