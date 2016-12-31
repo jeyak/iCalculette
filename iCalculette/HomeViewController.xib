@@ -43,16 +43,16 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" id="DKn-eY-zzn">
-                            <rect key="frame" x="4" y="137" width="401" height="123"/>
+                            <rect key="frame" x="4" y="129" width="401" height="131"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="70"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" id="oT2-Ab-SUm">
-                            <rect key="frame" x="4" y="25" width="401" height="67"/>
+                            <rect key="frame" x="4" y="14" width="401" height="81"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -108,7 +108,7 @@
                         <color key="titleShadowColor" red="0.71273609090000001" green="0.82052186199999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="btnComa_Click:" destination="-1" eventType="touchUpInside" id="RXC-wz-23U"/>
+                        <action selector="btnComma_Click:" destination="-1" eventType="touchUpInside" id="Qp0-Jq-Aah"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="upN-nc-8Xz">
@@ -116,7 +116,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <state key="normal" title="(-)">
+                    <state key="normal" title="-/+">
                         <color key="titleColor" red="0.1058519138" green="0.25155312169999999" blue="0.3317298159" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" red="0.71273609090000001" green="0.82052186199999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -228,7 +228,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.26822916666666663" green="0.12561806302241688" blue="0.17976846343733488" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <state key="normal" title="&lt;--">
+                    <state key="normal" title="&lt;x|">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>

@@ -51,7 +51,7 @@
 - (IBAction)btn3_Click:(UIButton *)sender;
 - (IBAction)btn0_Click:(UIButton *)sender;
 - (IBAction)btnNegate_Click:(UIButton *)sender;
-- (IBAction)btnComa_Click:(UIButton *)sender;
+- (IBAction)btnComma_Click:(UIButton *)sender;
 - (IBAction)btnC_Click:(UIButton *)sender;
 - (IBAction)btnCE_Click:(UIButton *)sender;
 - (IBAction)btnErase_Click:(UIButton *)sender;
@@ -70,8 +70,6 @@
 @property (nonatomic, assign) Boolean isOpButtonWasPressed;
 
 /// METHOD
-/// Reset les données de la calculatrice
-- (void) resetCalculator;
 
 /// Change l'Etat actif des bouton d'operation (+,-,/,*)
 - (void) changeOpBtnToggleEnableStateWithBool:(BOOL) state;
@@ -82,7 +80,7 @@
 
 /// Modifie le label principal d'affichage
 /// avec un unichar passer en paramètre
-- (void) printInScrenLabelWithUnichar:(unichar) car;
+- (void) printInScreenLabelWithUnichar:(unichar) car;
 
 /// Modifie le label de l'historique des operation et ajoute
 /// le nombre courrant avec le caractère de l'operateur choisi
