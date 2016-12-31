@@ -118,7 +118,6 @@
 
 - (IBAction)btnCE_Click:(UIButton *)sender {
     self.lblNumberPrinter.text = @"0";
-    self.opChar = ' ';
     self.lblNumberPrinter.text = @"0";
 }
 
