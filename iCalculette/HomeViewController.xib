@@ -223,18 +223,6 @@
                         <action selector="btnDivide_Click:" destination="-1" eventType="touchUpInside" id="vWV-xC-9ye"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yk1-N7-tar">
-                    <rect key="frame" x="208" y="276" width="101" height="90"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.26822916666666663" green="0.12561806302241688" blue="0.17976846343733488" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <state key="normal" title="&lt;x|">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="btnErase_Click:" destination="-1" eventType="touchUpInside" id="gcf-pY-HK4"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8iu-tC-2Fc">
                     <rect key="frame" x="2" y="276" width="101" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -311,11 +299,25 @@
                         <action selector="btnC_Click:" destination="-1" eventType="touchUpInside" id="HME-Sh-rc4"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Yk1-N7-tar">
+                    <rect key="frame" x="208" y="276" width="101" height="90"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.26822916666666663" green="0.12561806302241688" blue="0.17976846343733488" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="clearIcon">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnErase_Click:" destination="-1" eventType="touchUpInside" id="gcf-pY-HK4"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.49759615384615385" green="0.49519230769230771" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="462" y="393"/>
         </view>
     </objects>
+    <resources>
+        <image name="clearIcon" width="50" height="50"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
