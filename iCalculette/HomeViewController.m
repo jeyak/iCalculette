@@ -206,7 +206,7 @@
     if(car == '.' && ([self isCharactereIsPresentInNSString:self.lblNumberPrinter.text andWithNSString:@"."] != YES)){
         self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%c", self.lblNumberPrinter.text , car];
     }else{
-        if(![self.lblNumberPrinter.text isEqualToString:@"0"]){
+        if(![self.lblNumberPrinter.text isEqualToString:@"0"] && car != '.'){
             self.lblNumberPrinter.text = [NSString stringWithFormat:@"%@%c", self.lblNumberPrinter.text , car];
         }
     }
