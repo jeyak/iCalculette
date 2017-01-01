@@ -148,11 +148,11 @@
 }
 
 - (IBAction)btnMultiplier:(UIButton *)sender {
-    [self preExecuteOperationWithUnichar:'*'];
+    [self preExecuteOperationWithUnichar:215]; // Symbole multiplier
 }
 
 - (IBAction)btnDivide_Click:(UIButton *)sender {
-    [self preExecuteOperationWithUnichar:'/'];
+    [self preExecuteOperationWithUnichar:247]; // Symbole division
 }
 
 // METHOD
@@ -227,10 +227,10 @@
             case '-':
                 self.resultNb -= [self.lblNumberPrinter.text doubleValue];
                 break;
-            case '/':
+            case 247: // Symbole division
                 self.resultNb /= [self.lblNumberPrinter.text doubleValue];
                 break;
-            case '*':
+            case 215: // Symbole multiplier
                 self.resultNb *= [self.lblNumberPrinter.text doubleValue];
                 break;
             default:
