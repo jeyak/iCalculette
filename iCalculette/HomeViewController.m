@@ -136,7 +136,7 @@
 - (IBAction)btnEqual_Click:(UIButton *)sender {
     [self executeOperation];
     self.lblOperationHistory.text = @"";
-    self.opChar = ' ';
+    //self.opChar = ' ';
 }
 
 - (IBAction)btnMinus_Click:(UIButton *)sender {
