@@ -148,11 +148,11 @@
 }
 
 - (IBAction)btnMultiplier:(UIButton *)sender {
-    [self preExecuteOperationWithUnichar:215]; // Symbole multiplier
+    [self preExecuteOperationWithUnichar:(unichar)215]; // Symbole multiplier
 }
 
 - (IBAction)btnDivide_Click:(UIButton *)sender {
-    [self preExecuteOperationWithUnichar:247]; // Symbole division
+    [self preExecuteOperationWithUnichar:(unichar)247]; // Symbole division
 }
 
 // METHOD
@@ -215,7 +215,7 @@
 }
 
 - (void) printCurrentNumberInHistoryLabelWithOpUnichar:(unichar) op{
-    self.lblOperationHistory.text = [NSString stringWithFormat:@"%@%@%c", self.lblOperationHistory.text, self.lblNumberPrinter.text, op];
+    self.lblOperationHistory.text = [NSString stringWithFormat:@"%@%@%C", self.lblOperationHistory.text, self.lblNumberPrinter.text, op];
 }
 
 - (void) executeOperation{
